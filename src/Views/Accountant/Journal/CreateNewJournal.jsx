@@ -41,7 +41,7 @@ const CreateNewJournal = () => {
     const journalDetail = useSelector((state) => state?.journalDetail?.data?.data?.data);
     const params = new URLSearchParams(location.search);
     const { id: itemId, edit: isEdit, dublicate: isDublicate } = Object.fromEntries(params.entries());
-    // console.log("journalDetail", journalDetail)
+    console.log("journalDetail", journalDetail)
     const [formData, setFormData] = useState({
         journal_no: "",
         fy: localStorage.getItem('FinancialYear') || 2024,
