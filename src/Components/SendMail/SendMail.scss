@@ -1,0 +1,55 @@
+.send-mail {
+  max-width: 600px;
+  // margin: 0 auto;
+  padding: 20px;
+  // border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+
+  h2 {
+    // text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:first-of-type {
+        background-color: #4caf50;
+        color: #fff;
+      }
+
+      &:last-of-type {
+        background-color: #f44336;
+        color: #fff;
+      }
+    }
+  }
+}

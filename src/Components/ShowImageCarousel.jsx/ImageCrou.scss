@@ -1,0 +1,75 @@
+@use "../../scss/" as *;
+
+.custom-close-btn button.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@include mobile {
+    .modal-body {
+        padding: 0 !important;
+    }
+}
+
+.modal-content {
+    position: absolute !important;
+}
+
+.modal-header .btn-close {
+    border-radius: 250px;
+    border: 1px solid $primary02;
+    color: $white;
+
+    @include mobile {
+        zoom: 75%;
+    }
+}
+
+#colOfthhs {
+    @include mobile {
+        padding: 0 !important;
+    }
+}
+
+.react-photo-gallery--gallery {
+    :first-child {
+        width: 900px;
+        margin: auto;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        img {
+            object-fit: cover;
+            transition: .5s all;
+
+            &:hover {
+                transform: scale(.99);
+            }
+        }
+
+        @include mobile {
+            img {
+                gap: 4px;
+                margin: 2px 0 !important;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}

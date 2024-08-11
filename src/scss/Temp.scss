@@ -1,0 +1,161 @@
+@use "../scss/" as *;
+
+.clcsecx12s2 {
+  .xjkls54w32 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      font-size: 14px;
+    }
+
+    .sd54f6sdc523w {
+      display: flex;
+      gap: 10px;
+    }
+
+    .redxs4we {
+      font-size: 14px;
+      color: red;
+    }
+  }
+}
+
+
+.draftClassName {
+  background: #44b678;
+  position: absolute;
+  left: -95px;
+  top: -55px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}
+
+
+
+.approvedClassName {
+  background: #44b678;
+  position: absolute;
+  left: -112px;
+  top: -83px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 12px;
+  border: 4px double $primary09;
+}
+
+
+
+.declinedClassName {
+  background: #b64844;
+  position: absolute;
+  left: -115px;
+  top: -79px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 12px;
+  border: 4px double $primary09;
+}
+
+
+
+.sentClassName {
+  background: #2143df;
+  position: absolute;
+  left: -137px;
+  top: -81px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 12px;
+  border: 4px double $primary09;
+}
+
+.sentClassName1 {
+  background: #2143df;
+  position: absolute;
+  left: -141px;
+  top: -83px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}
+
+.sentClassName2 {
+  background: #2143df;
+  position: absolute;
+  left: -114px;
+  top: -72px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}
+
+
+
+.convertedClassName {
+  background: #dfac21;
+  position: absolute;
+  left: -110px;
+  top: -80px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}
+
+
+.labeltopleftx456 {
+  background: #B1AB1D;
+  position: absolute;
+  left: -95px;
+  top: -55px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}
+
+.publishedtx456 {
+  background: #268ddd;
+  position: absolute;
+  left: -115px;
+  top: -75px;
+  color: #ffffff;
+  transform: rotate(309deg);
+  transform-origin: right bottom;
+  white-space: nowrap;
+  padding: 5px 85px;
+  font-size: 14px;
+  border: 4px double $primary09;
+}

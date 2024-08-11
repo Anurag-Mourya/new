@@ -1,0 +1,713 @@
+@use "./scss/" as *;
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-family;
+//   background: #fff;
+//   background: #1c92d2;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(180deg, #dcefff, #d7edfe); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// background: $primary07;
+// background: rgb(197 214 226);
+background: $white;
+transition: 0.2s all;
+
+  @include mobile {
+    // display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $primary10;
+    background-color: $white;
+    padding: 21px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(8, 6, 57, 0.3);
+    cursor: pointer;
+    border-radius: 250px;
+
+    &:hover {
+      background: $primary05;
+    }
+  }
+}
+.newclassforallsvg {
+  filter: hue-rotate(0deg); 
+}
+input {
+  font-family: $font-family;
+}
+.color_red {
+  font-weight: 400;
+  color: rgb(255, 0, 0) !important;
+}
+
+// .filledcolorIn {
+//   background: $inputfilled !important;
+//   color: $btext !important;
+//   border-radius: 4px !important;
+// }
+#displaynone {
+  display: none;
+}
+
+
+// .go3958317564 {
+//   font-size: 113px !important;
+// }
+
+
+
+.extraclassoftooltip {
+  // background: $primary !important;
+  // background: rgb(57, 57, 72) !important;
+  // color: $white !important;
+
+
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+
+
+  box-shadow: 0 0px 30px 0 hsla(0, 0%, 0%, 0.10) !important;
+  border: 1px solid transparent;
+
+
+  opacity: 1.9 !important;
+  // box-shadow: 0 0px 12px 0 #ffffff !important;
+  // border: 1px solid $primary;
+  border-radius: 6px !important;
+  padding: 5px 15px !important; 
+  font-family: "Inter";
+  letter-spacing: .1px;
+  font-size: 12px !important;
+  z-index: 121221 !important;
+  
+  animation: popupZoomInx3 0.3s forwards !important; 
+}
+
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.disabledbtn {
+  opacity: .5;
+  cursor: not-allowed !important;
+}
+
+
+.bordersinglestroke {
+  border-top: 1px solid $stroke;
+}
+.buttonx1 {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: $font-family;
+  background: $primary;
+  color: $white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s all;
+  &:hover {
+    transform: scale(1.02);
+    background: $primary04;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: $black;
+  }
+}
+.buttonx2 {
+  border: none;
+  background: transparent;
+  @include flex(center, flex-end);
+  width: fit-content;
+  svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px;
+    font-size: 22px;
+    transition: 0.2s all;
+    color: #424242;
+    background: $primary09;
+    &:hover {
+      // box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1137254902);
+      // padding: 5px;
+      background: $primary06;
+    }
+  }
+}
+// .buttonx3 {
+//   position: relative;
+//   display: inline-block;
+//   cursor: pointer;
+//   outline: none;
+//   border: 0;
+//   vertical-align: middle;
+//   text-decoration: none;
+//   background: transparent;
+//   padding: 0;
+//   background: $primary10;
+//   border-radius: 1.625rem;
+//   // font-size: inherit;
+//   font-family: inherit;
+//   width: 80%;
+//   margin: auto;
+//   margin-top: 15px;
+//   // margin-top: 20px;
+//   &.buttonx3 {
+//     height: auto;
+//     .circle {
+//       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+//       position: relative;
+//       display: block;
+//       margin: 0;
+//       width: 2.2rem;
+//       height: 2.2rem;
+//       background: $primary;
+//       border-radius: 1.625rem;
+//       .icon {
+//         @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//         background: $white;
+//         &.arrow {
+//           @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+//           left: 0.325rem;
+//           width: 1.125rem;
+//           height: 0.125rem;
+//           background: none;
+//           &::before {
+//             position: absolute;
+//             content: "";
+//             top: -0.25rem;
+//             right: 0.0625rem;
+//             width: 0.625rem;
+//             height: 0.625rem;
+//             border-top: 0.125rem solid #fff;
+//             border-right: 0.125rem solid #fff;
+//             transform: rotate(45deg);
+//           }
+//         }
+//       }
+//     }
+//     .button-text {
+//       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//       // padding: 0.75rem 0;
+//       margin: 0 0 0 1.85rem;
+//       @include flex(center,center);
+//       color: $black;
+//       // font-weight: 700;
+//   font-size: 14px;
+//   font-weight: 400;
+//       line-height: 1.6;
+//       text-align: center;
+//       // text-transform: uppercase;
+//     }
+//   }
+//   &:hover {
+//     .circle {
+//       width: 100%;
+//       .icon {
+//         &.arrow {
+//           background: $white;
+//           transform: translate(1rem, 0);
+//         }
+//       }
+//     }
+//     .button-text {
+//       color: $white;
+//     }
+//   }
+// }
+
+#freezeloader {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 10.7);
+  background: #f6f8fa;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+
+  // background:#3498db;
+
+  background:$primary09;
+
+
+
+
+
+
+
+  @mixin same-size($sz) {
+    width: $sz;
+    height: $sz;
+  }
+  
+  // loader wrapper - can be used as a backdrop to obscure the rest of the page or given a transparent background/use hsla/rgba
+  .loader__wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include same-size(100%);
+    display: flex;
+    z-index: 1; // fine for this demo
+  }
+  
+  // container for animation
+  .loader {
+    --sz: 7rem;
+    width: calc(var(--sz) * 2);
+    height: var(--sz);
+    margin: auto; // centers along both main and cross axis in flex containers
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  // each half of the animation container
+  .loader__sq {
+    // size of each loader piece circle/triangle;
+    --p-sz: calc(var(--sz) / 4);
+    // margin offset so each half of the container overlaps a bit
+    --m-offset: calc((var(--p-sz) * -1) * 0.75);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+  
+    &::before,
+    &::after {
+      @include same-size(var(--p-sz));
+      content: "";
+      position: relative;
+      // transform is what's being animated
+      transform: translateY(calc((var(--sz) - var(--p-sz)) * -1));
+  
+      animation: loader-box-bounce 0.5s cubic-bezier(0.3, 0.5, 0.4, 0.95)
+        calc(var(--i) * 0.06s) infinite alternate-reverse;
+    }
+  
+    &:first-of-type {
+      margin-right: var(--m-offset);
+  
+      // first el animated and first visual element
+      &::before {
+        --i: 1;
+        border: 3px solid #ff7ab5;
+        border-radius: 50%;
+      }
+  
+      // second element visually; third el animated
+      &::after {
+        --i: 3;
+        background-color: #c643fb;
+        // make the loader pieces triangles in supporting browsers
+        @supports (clip-path: circle()) {
+          clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+      }
+    }
+  
+    &:nth-of-type(2) {
+  
+      // third element visually; 2nd el animated
+      &::before {
+        --i: 2;
+        border: 3px solid #ffb650;
+      }
+      
+      // fourth element visually, fourth el animated
+      &::after {
+        --i: 4;
+        background-color: #2fe2dd;
+        border-radius: 50%;
+        
+        @supports (clip-path: circle()) {
+          border-radius: 0;
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+      }
+  
+    }
+  }
+  
+  @keyframes loader-box-bounce {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  // general page styles
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+
+
+
+
+
+
+  // .cs-loader {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+  // }
+  
+  // .cs-loader-inner {
+  //   transform: translateY(-50%);
+  //   top: 50%;
+  //   position: absolute;
+  //   width: calc(100% - 200px);
+  //   color: $primary;
+  //   padding: 0 100px;
+  //   text-align: center;
+  //   display: flex;
+  //   justify-content: center;
+  //   gap: 10px;
+  // }
+  
+  // .cs-loader-inner label {
+  //   font-size: 30px;
+  //   opacity: 0;
+  //   display:inline-block;
+  // }
+  
+  // @keyframes lol {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateX(-300px);
+  //   }
+  //   33% {
+  //     opacity: 1;
+  //     transform: translateX(0px);
+  //   }
+  //   66% {
+  //     opacity: 1;
+  //     transform: translateX(0px);
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //     transform: translateX(300px);
+  //   }
+  // }
+  
+  // @-webkit-keyframes lol {
+  //   0% {
+  //     opacity: 0;
+  //     -webkit-transform: translateX(-300px);
+  //   }
+  //   33% {
+  //     opacity: 1;
+  //     -webkit-transform: translateX(0px);
+  //   }
+  //   66% {
+  //     opacity: 1;
+  //     -webkit-transform: translateX(0px);
+  //   }
+  //   100% {
+  //     opacity: 0;
+  //     -webkit-transform: translateX(300px);
+  //   }
+  // }
+  
+  // .cs-loader-inner label:nth-child(6) {
+  //   -webkit-animation: lol 3s infinite ease-in-out;
+  //   animation: lol 3s infinite ease-in-out;
+  // }
+  
+  // .cs-loader-inner label:nth-child(5) {
+  //   -webkit-animation: lol 3s 100ms infinite ease-in-out;
+  //   animation: lol 3s 100ms infinite ease-in-out;
+  // }
+  
+  // .cs-loader-inner label:nth-child(4) {
+  //   -webkit-animation: lol 3s 200ms infinite ease-in-out;
+  //   animation: lol 3s 200ms infinite ease-in-out;
+  // }
+  
+  // .cs-loader-inner label:nth-child(3) {
+  //   -webkit-animation: lol 3s 300ms infinite ease-in-out;
+  //   animation: lol 3s 300ms infinite ease-in-out;
+  // }
+  
+  // .cs-loader-inner label:nth-child(2) {
+  //   -webkit-animation: lol 3s 400ms infinite ease-in-out;
+  //   animation: lol 3s 400ms infinite ease-in-out;
+  // }
+  
+  // .cs-loader-inner label:nth-child(1) {
+  //   -webkit-animation: lol 3s 500ms infinite ease-in-out;
+  //   animation: lol 3s 500ms infinite ease-in-out;
+  // }
+
+
+
+  // $loader--width: 250px;
+  // $loader-dot--size: 20px;
+  
+  // .containeroffreezeloader {
+  //   height: 100vh;
+  //   width: 100vw;
+  // }
+  // .loaderoffreezeloa {
+  //   height: $loader-dot--size;
+  //   width: $loader--width;
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  
+  //   &--dotx454we {
+  //     animation: {
+  //       name: loader;
+  //       timing-function: ease-in-out;
+  //       duration: 3s;
+  //       iteration-count: infinite;
+  //     }
+  //     height: $loader-dot--size;
+  //     width: $loader-dot--size;
+  //     border-radius: 100%;
+  //     background-color: black;
+  //     position: absolute;
+  //     border: 2px solid white;
+  
+  //     &:first-child {
+  //       background-color: #8cc759;
+  //       animation-delay: 0.5s;
+  //     }
+  //     &:nth-child(2) {
+  //       background-color: #8c6daf;
+  //       animation-delay: 0.4s;
+  //     }
+  //     &:nth-child(3) {
+  //       background-color: #ef5d74;
+  //       animation-delay: 0.3s;
+  //     }
+  //     &:nth-child(4) {
+  //       background-color: #f9a74b;
+  //       animation-delay: 0.2s;
+  //     }
+  //     &:nth-child(5) {
+  //       background-color: #60beeb;
+  //       animation-delay: 0.1s;
+  //     }
+  //     &:nth-child(6) {
+  //       background-color: #fbef5a;
+  //       animation-delay: 0s;
+  //     }
+  //   }
+  //   &--text {
+  //     position: absolute;
+  //     top: 200%;
+  //     left: 0;
+  //     right: 0;
+  //     width: 4rem;
+  //     width: fit-content;
+  //     margin: auto;
+  //     font-weight: 500;
+  
+  //     &:after {
+  //       content: "Loading";
+  //       animation: {
+  //         name: loading-text;
+  //         duration: 4s;
+  //         iteration-count: infinite;
+  //       };
+  //     }
+  //   }
+  // }
+  // @keyframes loader {
+  //   15% {
+  //     transform: translateX(0);
+  //   }
+  //   45% {
+  //     transform: translateX( $loader--width - $loader-dot--size );
+  //   }
+  //   65% {
+  //     transform: translateX( $loader--width - $loader-dot--size );
+  //   }
+  //   95% {
+  //     transform: translateX(0);
+  //   }
+  // }
+  
+  // @keyframes loading-text {
+  //   0% {
+  //     content: "Loading";
+  //   }
+  //   25% {
+  //     content: "Loading.";
+  //   }
+  //   50% {
+  //     content: "Loading..";
+  //   }
+  //   75% {
+  //     content: "Loading...";
+  //   }
+  // };
+
+
+
+
+
+
+
+
+
+
+
+  
+}
+
+input , button,textarea{
+  font-family: $font-family;
+  
+}
+
+
+#randomheight {
+  height: 150px;
+}
+
+.randomheightagain {
+  height: 50px;
+}
+
+.redcolortext {
+  color: red;
+}
+.primarycolortext {
+  color: $lightprimary !important;
+  fill: $lightprimary !important;
+  
+  svg {
+    color: $lightprimary !important;
+    
+  }
+  .dropdown-selected {
+    
+    color: $lightprimary !important;
+    // font-weight: 500;
+    
+  }
+  .dropdown-option {
+    
+    color: $btext !important;
+  }
+  &::placeholder {
+    color: $lightprimary !important;
+
+  }
+}
+.btextcolor {
+  color: $btext !important;
+  svg {
+    color: $btext !important;
+    
+  }
+}
+
+input {
+  &::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+
+
+
+.mainprimarycolorback {
+  background: $primary !important;
+  color: $white !important;
+  svg {
+    padding: 2px;
+    color: $black !important;
+  }
+}
+
+
+.ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within  {
+  border-color: transparent !important;
+}
+
+
+
+
+
+.px5space {
+  height: 5px;
+}
+
+
+.overflow_hidden {
+  overflow: hidden !important;
+}
+
+
+.fs14  {
+  font-size: 14px;
+}
+
+
+.highlighteddiv {
+  background: rgba(128, 128, 128, 0.1) !important;
+  cursor: not-allowed;
+}
+.extrahighlighteddiv {
+  background: rgba(255, 0, 0, 0.1) !important;
+  cursor: not-allowed;
+}
+
+
+.relateivdiv {
+  position: relative;
+}
+
